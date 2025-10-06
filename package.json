@@ -1,0 +1,23 @@
+{
+  "name": "he-thong-quan-ly-nha-o-cho-thue",
+  "version": "1.0.0",
+  "description": "Hệ thống quản lý nhà ở cho thuê",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "web3": "^1.5.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "^4.0.1"
+  },
+  "devDependencies": {},
+  "author": "Your Name",
+  "license": "MIT"
+}
