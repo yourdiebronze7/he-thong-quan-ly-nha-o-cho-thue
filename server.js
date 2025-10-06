@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Kết nối tới MongoDB
-const mongoURI = 'mongodb://username:password@localhost:27017/rental_management';
+const mongoURI = process.env.MONGODB_URI || 'mongodb://username:password@localhost:27017/rental_management';
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
