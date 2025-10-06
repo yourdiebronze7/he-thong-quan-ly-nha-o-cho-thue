@@ -7,9 +7,10 @@ const app = express();
 app.use(bodyParser.json());
 
 // Kết nối tới MongoDB
-mongoose.connect('mongodb://localhost:27017/rental_management', { useNewUrlParser: true, useUnifiedTopology: true })
+const mongoURI = 'mongodb://username:password@localhost:27017/rental_management';
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
-    .catch(err => console.log(err));
+    .catch(err => console.error('MongoDB connection error:', err));
 
 app.get('/', (req, res) => {
     res.send('Hệ thống quản lý nhà ở cho thuê hoạt động');
